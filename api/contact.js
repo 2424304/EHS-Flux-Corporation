@@ -192,24 +192,44 @@ module.exports = async (req, res) => {
     return res.status(413).json({ success: false, error: 'Request too large.' });
   }
 
-  // Read body
-  let raw;
-  try {
-    const chunks = [];
-    for await (const chunk of req.body) chunks.push(chunk);
-    raw = Buffer.concat(chunks).toString('utf8');
-  } catch (e) {
-    return res.status(400).json({ success: false, error: 'Invalid request body.' });
-  }
-
+  // Read body — supports Vercel's parsed body and raw JSON requests
   let body;
-  try { body = JSON.parse(raw); }
-  catch (e) { return res.status(400).json({ success: false, error: 'Invalid JSON.' }); }
 
-  // Rate limit
-  const ip = getClientIp(req);
-  if (!rateLimit(ip)) {
-    return res.status(429).json({ success: false, error: 'Too many submissions. Please try again in a minute.' });
+  try {
+    if (
+      req.body &&
+      typeof req.body === 'object' &&
+      !Buffer.isBuffer(req.body)
+    ) {
+      // Vercel has already parsed the JSON body
+      body = req.body;
+    } else {
+      let raw;
+
+      if (Buffer.isBuffer(req.body)) {
+        raw = req.body.toString('utf8');
+      } else if (typeof req.body === 'string') {
+        raw = req.body;
+      } else {
+        // Fallback for an unparsed request stream
+        const chunks = [];
+
+        for await (const chunk of req) {
+          chunks.push(
+            Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)
+          );
+        }
+
+        raw = Buffer.concat(chunks).toString('utf8');
+      }
+
+      body = JSON.parse(raw);
+    }
+  } catch (e) {
+    return res.status(400).json({
+      success: false,
+      error: 'Invalid request body.'
+    });
   }
 
   // Validate
