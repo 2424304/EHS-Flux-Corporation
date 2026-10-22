@@ -1,0 +1,39 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.vercel
+
+# Build output / cache
+dist/
+build/
+.cache/
+.vercel/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.suo
+*.user
+
+# Logs
+*.log
+
+# Tests
+.nyc_output/
+coverage/

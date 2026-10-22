@@ -1,0 +1,33 @@
+{
+  "name": "ehs-flux-corporation",
+  "version": "1.0.0",
+  "description": "EHS Flux Corporation — Water Treatment & ZLD Consulting website with serverless enquiry endpoint.",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "echo \"Static site — no build step required. Use 'vercel build' for production deployment.\"",
+    "preview": "vite preview --port 3000",
+    "start": "npx serve public -l 3000",
+    "test": "node tests/run-tests.js",
+    "test:api": "node tests/api.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ehs-flux",
+    "water-treatment",
+    "zld",
+    "zero-liquid-discharge",
+    "etp",
+    "consulting",
+    "vercel",
+    "resend"
+  ],
+  "author": "EHS Flux Corporation <info@ehsflux.com>",
+  "license": "MIT",
+  "homepage": "https://ehsflux.com",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

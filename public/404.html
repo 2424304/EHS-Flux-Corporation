@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | EHS Flux Corporation</title>
+  <meta name="description" content="The page you are looking for could not be found." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .nf-wrap {
+      min-height: calc(100vh - var(--nav-height) - 200px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background: var(--bg);
+      text-align: center;
+    }
+    .nf-content { max-width: 560px; }
+    .nf-404 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(4rem, 12vw, 8rem);
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.04em;
+    }
+    .nf-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .nf-desc { color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; }
+    .nf-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .nf-actions .btn { min-width: 180px; }
+    .nf-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: var(--navy);
+    }
+    .nf-logo:hover { text-decoration: none; }
+    .nf-logo img { width: 44px; height: 44px; }
+    .nf-logo-text { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="EHS Flux Corporation home">
+        <img src="assets/logo/ehs-flux-logo-navbar.png" alt="EHS Flux Corporation logo" class="brand-logo" width="44" height="44" />
+        <span class="brand-text">
+          <span class="brand-name">EHS Flux Corporation</span>
+          <span class="brand-tagline">Water Treatment &amp; ZLD Consulting</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="nf-wrap">
+    <div class="nf-content">
+      <a href="index.html" class="nf-logo">
+        <img src="assets/logo/ehs-flux-logo-navbar.png" alt="EHS Flux Corporation logo" />
+        <span class="nf-logo-text">EHS Flux Corporation</span>
+      </a>
+      <div class="nf-404">404</div>
+      <h1 class="nf-title">Page Not Found</h1>
+      <p class="nf-desc">The page you are looking for may have been moved, deleted, or never existed. Let's get you back to clean water.</p>
+      <div class="nf-actions">
+        <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+        <a href="index.html#contact" class="btn btn-secondary btn-lg">Send an Enquiry</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> EHS Flux Corporation. All rights reserved.</p>
+        <p class="footer-meta">Water Treatment &amp; Zero Liquid Discharge Consulting | Hyderabad, Telangana, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

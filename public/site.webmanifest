@@ -1,0 +1,24 @@
+{
+  "name": "EHS Flux Corporation",
+  "short_name": "EHS Flux",
+  "description": "Water Treatment & Zero Liquid Discharge Consulting",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#073B70",
+  "icons": [
+    {
+      "src": "assets/logo/ehs-flux-logo-navbar.png",
+      "sizes": "160x160",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo/ehs-flux-logo-navbar.png",
+      "sizes": "160x160",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

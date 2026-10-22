@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- EHS Flux favicon: simplified water drop with ripple -->
+  <defs>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16A9E8"/>
+      <stop offset="100%" stop-color="#073B70"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="#FFFFFF"/>
+  <!-- Water drop -->
+  <path d="M32 10 C 32 10, 18 28, 18 38 A 14 14 0 0 0 46 38 C 46 28, 32 10, 32 10 Z" fill="url(#drop)"/>
+  <!-- Ripples -->
+  <ellipse cx="32" cy="50" rx="20" ry="3" fill="none" stroke="#16A9E8" stroke-width="1.5"/>
+  <ellipse cx="32" cy="54" rx="14" ry="2.5" fill="none" stroke="#0969B8" stroke-width="1"/>
+  <ellipse cx="32" cy="58" rx="9" ry="2" fill="none" stroke="#073B70" stroke-width="0.8"/>
+</svg>
